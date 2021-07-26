@@ -16,7 +16,7 @@ const nodemailer = require('nodemailer');
 const { google } = require('googleapis');
 const { spanner } = require('googleapis/build/src/apis/spanner');
 
-mongoose.connect("mongodb+srv://Nishant:username@cluster0.m0yjk.mongodb.net/DBName ?retryWrites=true&w=majority",{ useNewUrlParser: true , useUnifiedTopology: true, useCreateIndex : true, useFindAndModify : false})
+mongoose.connect("mongodb+srv://Name:username@cluster0.m0yjk.mongodb.net/DBName ?retryWrites=true&w=majority",{ useNewUrlParser: true , useUnifiedTopology: true, useCreateIndex : true, useFindAndModify : false})
 
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
