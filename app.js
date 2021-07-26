@@ -16,7 +16,7 @@ const nodemailer = require('nodemailer');
 const { google } = require('googleapis');
 const { spanner } = require('googleapis/build/src/apis/spanner');
 
-mongoose.connect("mongodb+srv://Nishant:nishant1234@cluster0.m0yjk.mongodb.net/Sanjay?retryWrites=true&w=majority",{ useNewUrlParser: true , useUnifiedTopology: true, useCreateIndex : true, useFindAndModify : false})
+mongoose.connect("mongodb+srv://Nishant:username@password.m0yjk.mongodb.net/DBName ?retryWrites=true&w=majority",{ useNewUrlParser: true , useUnifiedTopology: true, useCreateIndex : true, useFindAndModify : false})
 
 const db = mongoose.connection;
 db.on("error", console.error.bind(console, "connection error:"));
@@ -43,10 +43,10 @@ app.use(session({
 app.use(flash());
 app.use(upload());
 
-const CLIENT_ID = '262416599801-tmopu039rg77gvrs4gida57p9qpdf4rj.apps.googleusercontent.com';
-const CLEINT_SECRET = 'NOcPev831BDHpG2H0OZj5p-v';
+const CLIENT_ID = 'your_client_id';
+const CLEINT_SECRET = 'your_client_secret';
 const REDIRECT_URI = 'https://developers.google.com/oauthplayground';
-const REFRESH_TOKEN = '1//04PAv5HHeMsHACgYIARAAGAQSNwF-L9IriktIhx_6jNzj8O-DuF7PbssJgd1r876VhZkzsinVQhjzidrhx_0uLspNR2ch-tURk44';
+const REFRESH_TOKEN = 'your_refresh_token';
 
 const oAuth2Client = new google.auth.OAuth2(
     CLIENT_ID,
